@@ -1,0 +1,26 @@
+<button class="btn btn-green">
+    Button
+</button>
+
+<Child />
+
+<script>
+    import Child from './Child';
+
+    export default {
+        components: { Child }
+    };
+</script>
+
+<style>
+    @import 'tailwindcss/preflight';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+
+    .btn-green {
+        @apply bg-green text-white;
+    }
+    .btn-green:hover {
+        @apply bg-green-light;
+    }
+</style>

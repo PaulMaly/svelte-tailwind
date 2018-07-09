@@ -1,0 +1,36 @@
+<div class="wrapper">  
+    <Nested>
+        <Slotted />
+    </Nested>
+
+    <svelte:component this={Injected} />
+</div>
+
+<script>
+    import Nested from './Nested';
+    import Injected from './Injected';
+    import Slotted from './Slotted';
+
+    export default {
+        components: { Nested, Slotted },
+        data() {
+            return { Injected };
+        }
+    };
+</script>
+
+<style>
+    @import 'tailwindcss/preflight';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+
+    .wrapper {
+        @apply .flex .items-center .mx-auto;
+    }
+
+    :global(.btn) {
+        @apply font-bold;
+        padding: .5rem 1rem!important;
+        border-radius: .25rem!important;
+    }  
+</style>

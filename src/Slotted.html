@@ -1,0 +1,18 @@
+<button class="btn btn-grey">
+    Button
+</button>
+
+<slot></slot>
+
+<style>
+    @import 'tailwindcss/preflight';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+
+    .btn-grey {
+        @apply bg-grey-light text-grey-darkest;
+    }
+    .btn-grey:hover {
+        @apply bg-grey;
+    }    
+</style>

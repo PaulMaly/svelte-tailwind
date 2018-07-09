@@ -1,0 +1,18 @@
+<button class="btn btn-orange">
+    Button
+</button>
+
+<slot></slot>
+
+<style>
+    @import 'tailwindcss/preflight';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+
+    .btn-orange {
+        @apply bg-orange text-white;
+    }
+    .btn-orange:hover {
+        @apply bg-orange-dark;
+    }    
+</style>

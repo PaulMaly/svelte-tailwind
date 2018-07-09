@@ -1,0 +1,18 @@
+<button class="btn btn-blue">
+    Button
+</button>
+
+<slot></slot>
+
+<style>
+    @import 'tailwindcss/preflight';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+    
+    .btn-blue {
+        @apply bg-blue text-white;
+    }
+    .btn-blue:hover {
+        @apply bg-blue-dark;
+    }
+</style>
